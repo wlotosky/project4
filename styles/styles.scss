@@ -1,0 +1,130 @@
+body {
+	background-image: url(../assets/swirl_pattern.png);
+	background-repeat: repeat;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+input, option, label, select, button, input[type="submit"] {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Playfair Display', serif;
+} 
+
+button, input[type="submit"] {
+	border: solid 2px darken(rgba(66, 139, 240, 1), 30%);
+	border-radius: 15px;
+	background-color: rgba(66, 139, 240, 0.8);
+	color: darken(rgba(66, 139, 240, 1), 30%);
+	padding: 10px;
+	margin: 10px;
+	font-size: 18px;
+	&:focus {
+		outline: none;
+	}
+}
+
+input[type="radio"], select, option {
+	border: solid 2px darken(rgba(66, 139, 240, 1), 30%);
+	background-color: rgba(66, 139, 240, 0.8);
+	color: darken(rgba(66, 139, 240, 1), 30%);
+	font-size: 18px;
+	transition: all 0.3s;
+	&:focus {
+		outline: none;
+	}
+}
+
+header {
+	text-align: center;
+	h1 {
+		color: darken(rgba(66, 139, 240, 1), 30%);
+		font-size: 75px;
+		font-weight: 900;
+		transition: all 0.3s;
+		@media (max-width: 480px) {
+			font-size: 50px;
+		}
+	}
+	
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.firstChoice, .secondChoice, .thirdChoice {
+	padding: 100px;
+	background-color: rgba(66, 139, 240, 0.3);
+	border-radius: 40px;
+	margin: 60px 0;
+	text-align: center;
+	position: relative;
+	transition: all 0.3s;
+	@media (max-width: 480px) {
+		padding: 40px;
+	}
+	h3 {
+		font-size: 28px;
+		transition: all 0.3s;
+		@media (max-width: 480px) {
+			font-size: 20px;
+		}
+	}
+	h3:first-of-type {
+		margin-top: 0;
+	}
+	.usersFoodChoice {
+		padding: 10px;
+		margin-left: 20px;
+		width: 100%;
+		font-size: 20px;
+		border: none;
+		background-color: rgba(66, 139, 240, 0.7);
+		transition: all 0.3s;
+		&:focus {
+			background-color: rgba(66, 139, 240, 0.5);
+			border-bottom: 4px solid rgba(66, 139, 240, 1);
+			outline: none;
+		}
+	}
+}
+
+#foodGroups {
+	width: 100%;
+}
+
+.bigNumber {
+	margin: 0;
+	line-height: 0;
+	font-size: 120px;
+	position: absolute;
+	top: 70px;
+	left: 60px;
+	color: rgba(66, 139, 240, 0.5);
+	z-index: -1;
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-60%, -35%);
+		content: '';
+		height: 140px;
+		width: 140px;
+		border: solid 2px rgba(66, 139, 240, 0.5);
+		border-radius: 50%;
+		z-index: -1;
+	}
+}
+
+#foodOptions {
+	width: 100%;
+}
+
+.moreDataButtons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}

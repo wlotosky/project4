@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What's In My Food?</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Source+Sans+Pro:300,400" rel="stylesheet">
+</head>
+<body>
+	
+	<header>
+		<h1>What's In My Food?</h1>
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<section class="firstChoice">
+				<h2 class="bigNumber">1.</h2>
+				<form action="" id="usersFoodChoice">
+
+					<h3>Make some selections to generate some potential matches (required)</h3>
+
+					<label for="userFoodChoice">Search by Keyword</label>
+					<input type="text" id="userFoodChoice" placeholder="Enter a food" class="usersFoodChoice" required>
+
+					<div class="foodGroupButtons">
+						<h3>What types of food are you interested in? (optional)</h3>
+						<input type="radio" id="brandFood" value="Branded Food Products" name="userPreference">
+						<label for="brandFood">Brandname Food</label>
+						<input type="radio" id="genericFood" value="Standard Reference" name="userPreference">
+						<label for="genericFood">Generic Food</label>
+						<input type="radio" id="neitherFood" value="" name="userPreference">
+						<label for="neitherFood">Both</label>
+					</div>
+
+
+					<h3>Select a specific food group (optional)</h3>
+					<select name="foodGroups" id="foodGroups">
+						<option data-fg="">No Food Group</option>
+						<option data-fg="3500">American Indian/Alaska Native Foods</option>
+						<option data-fg="0300">Baby Foods</option>
+						<option data-fg="1800">Baked Products</option>
+						<option data-fg="1300">Beef Products</option>
+						<option data-fg="1400">Beverages</option>
+						<option data-fg="0800">Breakfast Cereals</option>
+						<option data-fg="2000">Cereal Grains and Pasta</option>
+						<option data-fg="0100">Dairy and Egg Products</option>
+						<option data-fg="2100">Fast Foods</option>
+						<option data-fg="0400">Fats and Oils</option>
+						<option data-fg="1500">Finfish and Shellfish Products</option>
+						<option data-fg="0900">Fruits and Fruit Juices</option>
+						<option data-fg="1700">Lamb, Veal and Game Products</option>
+						<option data-fg="1600">Legumes and Legume Products</option>
+						<option data-fg="2200">Meals, Entrees and Side Dishes</option>
+						<option data-fg="1200">Nut and Seed Products</option>
+						<option data-fg="1000">Pork Products</option>
+						<option data-fg="0500">Poultry Products</option>
+						<option data-fg="3600">Restaurant Foods</option>
+						<option data-fg="0700">Sausages and Luncheon Meats</option>
+						<option data-fg="2500">Snacks</option>
+						<option data-fg="0600">Soups, Sauces and Gravies</option>
+						<option data-fg="0200">Spices and Herbs</option>
+						<option data-fg="1900">Sweets</option>
+						<option data-fg="1100">Vegetables and Vegetable Products</option>
+					</select>
+					<input type="submit">
+					<div class="errorBox"></div>
+				</form>
+			</section>
+			
+			<section class="secondChoice">
+				<h2 class="bigNumber">2.</h2>
+				<h3>Are any of these what you're looking for?</h3>
+				<select name="foodOptions" id="foodOptions">
+
+				</select>
+
+
+			</section>
+
+			<section class="thirdChoice">
+
+				<h2 class="bigNumber">3.</h2>
+				<h3>Nutritional Data for 100g Serving Size</h3>
+				<div class="moreDataButtons">
+
+					<button class="moreDataButton viewBasic">View Basic</button>
+					<button class="moreDataButton viewMinerals">View Minerals</button>
+					<button class="moreDataButton viewVitamins">View Vitamins</button>
+					<button class="moreDataButton viewLipids">View Lipids</button>
+					<button class="moreDataButton viewAminoAcids">View Amino Acids</button>
+					<button class="moreDataButton viewOther">View Other</button>
+
+				</div>
+				
+					<section class="dataDisplay"></section>
+			</section>
+		</div>
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<script src="scripts/scripts.js"></script>
+</body>
